@@ -1,3 +1,0 @@
-[submodule "webhook-server"]
-	path = webhook-server
-	url = https://github.com/carlos-jenkins/python-github-webhooks
