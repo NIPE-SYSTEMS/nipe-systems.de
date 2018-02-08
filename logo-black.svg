@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270.93333 270.93334" version="1.1">
+  <defs>
+    <linearGradient x1="61.610119" y1="75.505936" x2="235.1012" y2="226.69641" gradientUnits="userSpaceOnUse" id="backgroundGradient">
+      <stop style="stop-color:#080808;" offset="0" />
+      <stop style="stop-color:#353535;" offset="1" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(0, -26.06665)">
+    <path d="m 252.78426,229.26665 -117.31759,67.73333 -117.317577,-67.73333 0,-135.466678 117.317587,-67.733337 117.31758,67.733338 z" fill="url(#backgroundGradient)"></path>
+    <text style="font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 50px; line-height: 1.25; font-family: Heebo; text-align: center; letter-spacing: -2.75166678px; word-spacing: 0px; text-anchor: middle; fill: #ffffff; fill-opacity: 1;" x="135.89957" y="147.11191">NIPE</text>
+    <text style="font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 50px; line-height: 1.25; font-family: Heebo; text-align: center; letter-spacing: -2.75166678px; word-spacing: 0px; text-anchor: middle; fill: #ffffff; fill-opacity: 1;" x="134.52374" y="211.25774">SYSTEMS</text>
+    <rect fill="#ffffff" width="207.87201" height="7" x="31.530844" y="157.5"></rect>
+  </g>
+</svg>

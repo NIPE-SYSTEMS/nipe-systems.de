@@ -1,0 +1,12 @@
+# (C) by NIPE-SYSTEMS.de
+# robots.txt für http://www.nipe-systems.de
+
+# Sitemap einrichten
+Sitemap: http://nipe-systems.de/sitemap.php
+
+# Google nicht erlauben Bilder zu speichern
+User-agent: Googlebot-Image
+Disallow: /
+User-agent: *
+Disallow: webapps/
+Disallow: edit/
