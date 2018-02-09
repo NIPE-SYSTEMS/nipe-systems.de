@@ -1,8 +1,14 @@
 # nipe-systems.de website continuous deployment
 
-This repository includes all files that are needed for the continuous deployment of the NIPE-SYSTEMS website. A author may push a new version of parts of the website to this repository. This triggers a completely autonomous deployment to the web server.
+This repository includes all files that are needed for the continuous deployment of the NIPE-SYSTEMS website. A author may push a new version of parts of the website to this repository. This triggers a completely autonomous deployment to the web server. This architecture automates the following steps:
 
-## Deploy website
+1. User modifies files
+2. User commits and pushes files to remote repository
+3. **GitHub triggers architecture via webhook**
+4. **Webhook server triggers webserver update**
+5. **Webserver pulls files and generates current version of the website**
+
+## Website deployment
 
 When new files are pushed to this repository trigger `git pull` and then execute:
 
