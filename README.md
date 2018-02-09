@@ -51,7 +51,7 @@ location / {
 	proxy_request_buffering off;
 	
 	# IPs from https://api.github.com/meta
-	allow 192.30.252.0/22
+	allow 192.30.252.0/22;
 	allow 185.199.108.0/22;
 	deny all;
 	
