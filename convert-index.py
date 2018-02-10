@@ -57,7 +57,12 @@ def retrieve_structure(project_dir, trigger_dir):
 	triggers_recent = [ t for t in triggers if not t["later"] ]
 	triggers_later = [ t for t in triggers if t["later"] ]
 	
-	bytime_recent = { label: list(triggers) for label, triggers in itertools.groupby(triggers_recent, key=lambda t: t["label"]) }
+	def filter_duplicate_triggers(triggers):
+		triggers = list(triggers)
+		d = { t["project"]: t for t in triggers }
+		return list(d.values())
+	
+	bytime_recent = { label: filter_duplicate_triggers(triggers) for label, triggers in itertools.groupby(triggers_recent, key=lambda t: t["label"]) }
 	
 	bytime_later = {}
 	for label, triggers in itertools.groupby(triggers_later, key=lambda t: t["label"]):
