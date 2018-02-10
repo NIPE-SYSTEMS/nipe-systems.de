@@ -2,7 +2,6 @@
 
 import os
 import datetime
-import operator
 import sys
 import hashlib
 import itertools
