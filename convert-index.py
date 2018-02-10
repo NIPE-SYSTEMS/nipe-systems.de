@@ -82,25 +82,31 @@ def retrieve_structure(project_dir, trigger_dir):
 
 def render_from_template(project_dir, trigger_dir, template_file, output_file):
 	structure = retrieve_structure(project_dir, trigger_dir)
-	import pprint
+	
 	for label, projects in structure["bytime_recent"].items():
 		for project in projects:
-			project.update({ "last": False })
+			project.update({ "last": False, "beforeyear": False })
 		projects[-1].update({ "last": True })
 	
 	for label, projects in structure["bytime_later"].items():
 		for project in projects:
-			project.update({ "last": False })
+			project.update({ "last": False, "beforeyear": False })
 		projects[-1].update({ "last": True })
 	
-	# if len(structure["bytime_later"]) > 0:
-	# 	structure["bytime_recent"]
+	if len(structure["bytime_later"]) > 0:
+		structure["bytime_recent"][list(structure["bytime_recent"].keys())[-1]].append({
+			"project": "",
+			"text": False,
+			"last": True,
+			"beforeyear": True
+		})
 	
 	def render_timeline_project(project):
-		last = " last" if project["last"] else ""
+		last = " last" if project["last"] and not project["beforeyear"] else ""
+		beforeyear = " beforeyear" if project["beforeyear"] else ""
 		link_pre = "<a href=\"{}.html\">".format(project["id"]) if project["text"] else ""
 		link_post = "</a>" if project["text"] else ""
-		return "\t\t\t<p class=\"timeline{}\">{}{}{}</p>\n".format(last, link_pre, project["project"], link_post)
+		return "\t\t\t<p class=\"timeline{}{}\">{}{}{}</p>\n".format(last, beforeyear, link_pre, project["project"], link_post)
 	
 	def render_timeline_time(label):
 		return "\t\t\t<time>{}</time>\n".format(label)
