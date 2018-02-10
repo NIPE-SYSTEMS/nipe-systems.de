@@ -17,6 +17,6 @@ echo "Generating index file ..."
 ./convert-index.py projects triggers template_index.html $1/index.html
 
 echo "Generating text files ..."
-find projects -name text | while read f; do
+find projects -name text.md | while read f; do
 	./convert-texts.sh "$f" template_text.html "$1/$(cat "$(dirname "$f")/id").html"
 done

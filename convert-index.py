@@ -23,7 +23,7 @@ def retrieve_project(project_dir, project):
 	return {
 		"name": project,
 		"id": uuid,
-		"text": os.path.exists("{}/{}/text".format(project_dir, project)),
+		"text": os.path.exists("{}/{}/text.md".format(project_dir, project)),
 		"tags": list(sorted(tags, key=lambda t: t["type"]))
 	}
 
@@ -42,7 +42,7 @@ def retrieve_trigger(project_dir, trigger_dir, timestamp):
 		"later": later,
 		"label": label,
 		"id": uuid,
-		"text": os.path.exists("{}/{}/text".format(trigger_dir, timestamp))
+		"text": os.path.exists("{}/{}/text.md".format(trigger_dir, timestamp))
 	}
 
 def retrieve_structure(project_dir, trigger_dir):
