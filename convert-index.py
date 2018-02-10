@@ -134,7 +134,7 @@ def render_from_template(project_dir, trigger_dir, template_file, output_file):
 		last = " last" if project["last"] else ""
 		link_pre = "<a href=\"{}.html\">".format(project["id"]) if project["text"] else ""
 		link_post = "</a>" if project["text"] else ""
-		return "\t\t\t<p class=\"project{}\">{}{}{}\n\t\t\t\t{}\t\t\t</p>\n".format(last, link_pre, project["name"], link_post, render_project_tags(project["tags"]))
+		return "\t\t\t<p class=\"project{}\">{}{}{}\n\t\t\t\t{}\n\t\t\t</p>\n".format(last, link_pre, project["name"], link_post, render_project_tags(project["tags"]))
 	
 	def render_project_label(label):
 		return "\t\t\t<aside>{}</aside>\n".format(label)
