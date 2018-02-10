@@ -20,6 +20,7 @@ where `/srv/http` is the deploy folder where the www-root is located. The deploy
 
 1. Copy files to webserver directory
 2. Generate index file
+2. Generate text files for projects
 
 More to be added in the future.
 
