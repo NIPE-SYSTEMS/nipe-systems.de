@@ -103,7 +103,7 @@ def render_from_template(project_dir, trigger_dir, template_file, output_file):
 	def render_timeline_project(project):
 		last = " last" if project["last"] and not project["beforeyear"] else ""
 		beforeyear = " beforeyear" if project["beforeyear"] else ""
-		link_pre = "<a href=\"/{}.html\">".format(project["id"]) if project["text"] else ""
+		link_pre = "<a href=\"{}.html\">".format(project["id"]) if project["text"] else ""
 		link_post = "</a>" if project["text"] else ""
 		return "\t\t\t<p class=\"timeline{}{}\">{}{}{}</p>\n".format(last, beforeyear, link_pre, project["project"], link_post)
 	
@@ -131,7 +131,7 @@ def render_from_template(project_dir, trigger_dir, template_file, output_file):
 	
 	def render_project_project(project):
 		last = " last" if project["last"] else ""
-		link_pre = "<a href=\"/{}.html\">".format(project["id"]) if project["text"] else ""
+		link_pre = "<a href=\"{}.html\">".format(project["id"]) if project["text"] else ""
 		link_post = "</a>" if project["text"] else ""
 		return "\t\t\t<p class=\"project{}\">{}{}{}\n\t\t\t\t{}\n\t\t\t</p>\n".format(last, link_pre, project["name"], link_post, render_project_tags(project["tags"]))
 	
